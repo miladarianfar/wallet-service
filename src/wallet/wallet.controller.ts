@@ -8,8 +8,10 @@ import {
 } from '@nestjs/common';
 import { WalletService } from './wallet.service';
 import { SubtractMoneyDto } from './dto/subtract-money.dto';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller('wallet')
+@ApiTags('wallet')
 export class WalletController {
   constructor(private readonly walletService: WalletService) {}
 
