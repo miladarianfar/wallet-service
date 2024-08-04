@@ -8,7 +8,7 @@ import { TransactionLogService } from './transaction-log.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Wallet, Transaction])],
-  providers: [WalletService],
+  providers: [WalletService, TransactionLogService],
   controllers: [WalletController],
   exports: [WalletService],
 })
