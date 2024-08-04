@@ -24,26 +24,36 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Wallet Service Apllication Documentaion
 
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
+## Setup Database
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+$ docker network create xnetwork
 ```
+
+```bash
+$ docker-compose up -d
+```
+
+## Installation with docker
+
+```bash
+$ docker build -t wallet-service .
+```
+
+## Running the app with docker
+
+```bash
+$ docker run -d -p 3000:3000 --name wallet-service-container wallet-service
+```
+
+## Documentation
+
+```bash
+$ http://localhost:3000/docs
+```
+
 
 ## Test
 
