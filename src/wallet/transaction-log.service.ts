@@ -26,7 +26,7 @@ export class TransactionLogService {
 
     const total = await this.transactionRepository
       .createQueryBuilder('transaction')
-      .where('transaction.date BETWEEN :start AND :end', { start, end })
+      .where('transaction.created_at BETWEEN :start AND :end', { start, end })
       .select('SUM(transaction.amount)', 'total')
       .getRawOne();
 
